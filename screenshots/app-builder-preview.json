@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Sudipta Mondal Suvo — Data Scientist & ML Engineer",
+      "hasCanvas": false,
+      "bodyTextLen": 6034,
+      "bodyTextHash": "450a6a94611a65e413cfcc3cdb0935f12e2341573b93202d42020f9f91ee89a5",
+      "bodyTextPrefix": "Skip to content DHAKA, BANGLADESH Sudipta Mondal Suvo Data Scien",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Sudipta Mondal Suvo — Data Scientist & ML Engineer",
+      "hasCanvas": false,
+      "bodyTextLen": 5923,
+      "bodyTextHash": "2c5b73be0a7f6ccf2495fa014bd72e0acb76f9c7398a44c54cabc0347878131b",
+      "bodyTextPrefix": "Skip to content DHAKA, BANGLADESH Sudipta Mondal Suvo Data Scien",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
