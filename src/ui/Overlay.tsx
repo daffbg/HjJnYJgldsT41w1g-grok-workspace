@@ -9,18 +9,23 @@ export function Overlay() {
   const ready = useStudio((s) => s.ready);
   const readable = useStudio((s) => s.readable);
   const webgl = useStudio((s) => s.webgl);
+  const reduced = useStudio((s) => s.reducedMotion);
   const copyRef = useRef<HTMLDivElement>(null);
   const s = SECTIONS[section];
   const hoverProject = PROJECTS.find((p) => p.id === hovered);
 
   useEffect(() => {
     if (!copyRef.current) return;
+    if (reduced) {
+      gsap.set(copyRef.current.children, { y: 0, opacity: 1 });
+      return;
+    }
     gsap.fromTo(
       copyRef.current.children,
       { y: 16, opacity: 0 },
       { y: 0, opacity: 1, duration: 0.55, stagger: 0.06, ease: "power3.out" },
     );
-  }, [section]);
+  }, [section, reduced]);
 
   if (readable || !webgl) return null;
 

@@ -1,9 +1,13 @@
 import { type ReactNode, useMemo, useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
+import { PROJECTS, type ProjectId } from "@/content/portfolio";
 import { useStudio } from "@/store/studio";
-import type { ProjectId } from "@/content/portfolio";
 import type { ScreenKit } from "@/lib/textures";
+
+function isProjectId(id: string | undefined): id is ProjectId {
+  return !!id && PROJECTS.some((p) => p.id === id);
+}
 
 export function Desk({ position }: { position: [number, number, number] }) {
   return (
@@ -88,6 +92,10 @@ export function Monitor({
         setHot(false);
         useStudio.getState().set({ hovered: null });
         document.body.style.cursor = "auto";
+      }}
+      onClick={(e) => {
+        e.stopPropagation();
+        if (isProjectId(id)) useStudio.getState().set({ activeProject: id });
       }}
     >
       <mesh position={[0, 0, -0.02]} castShadow>

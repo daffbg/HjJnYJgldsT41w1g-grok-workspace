@@ -16,7 +16,7 @@ export function Experience() {
   return (
     <Canvas
       className="studio-canvas"
-      shadows={q.shadows && quality === "high"}
+      shadows={q.shadows}
       dpr={dpr}
       gl={{
         antialias: q.antialias,
